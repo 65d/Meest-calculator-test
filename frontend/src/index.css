@@ -1,0 +1,237 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat;
+    color: #303A45;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    letter-spacing: 0.32px;
+    font-weight: 500;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+#brands-section{
+    background: linear-gradient(180deg, #F3F8FE 30%, rgb(255, 255, 255) 60%);
+}
+
+#about-section{
+    background-color: #F3F8FE;
+}
+
+#description-section{
+    background-color: #E5E7EA;
+}
+
+#calc-section{
+    background-color: #E5E7EA;
+}
+
+.appear-animation {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.btn-switch{
+    font-size: 17px;
+    transition: 0.3s all;
+    text-align: left;
+    width: 100%;
+    color: #333;
+    font-weight: 600;
+    padding: 1.25rem 3rem 1.25rem 3rem;
+    border-radius: 20px;
+}
+
+.btn-switch-active{
+    color: hsl(212, 92%, 41%);
+    background-color: hsl(213, 85%, 97%);
+    margin-left: -20px;
+    transition: 0.3s all;
+
+}
+
+.item-person-block{
+    transition: 0.5s all;
+    width: 20%;
+    height: 500px;
+}
+
+.selected-person-block {
+    transform-origin: bottom;
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.5s all;
+}
+  
+.non-selected-person-block {
+    transform-origin: bottom;
+    transform: scale(0.5);
+    opacity: 0.5;
+    transition: 0.5s all;
+}
+
+.green-diagram-img {
+    left: 0;
+    top: 0;
+    height: 100%;
+    max-width: unset;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.person-img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.input-green-diagram {
+    position: absolute;
+    width: 27%;
+    height: 3.2%;
+    border: none;
+    font-size: 90%;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.calc-option-bar{
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border: 2px solid grey;
+    width: 210px;
+    
+}
+
+.carousel .slide img {
+    width: unset;
+}
+
+.carousel .control-dots{
+    display: none;
+}
+
+.react-multi-carousel-list {
+    position: unset;
+}
+
+.carousel-arrow {
+    border-width: 2px;
+    border-style: solid;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.calc-shadow-box{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.199);
+}
+
+@media screen and (min-width: 768px){
+    .selected-person {
+        width: 60%;
+        transition: 0.5s all;
+    }
+    
+    /* .selected-person:last-child button{
+        margin: unset;
+    }
+    
+    .selected-person:first-child button{
+        margin: unset;
+        float: right;
+    } */
+}
+
+
+@media screen and (max-width: 767.98px) {
+    .non-selected-person-block {
+        transform: scale(1) !important;
+        opacity: 1 !important;
+    }
+    .calc-option-bar{
+        width: unset;
+    }
+    .person-img{
+        width: 140px !important;
+    }
+    .item-person-block{
+        width: unset;
+    }
+    .translate-left{
+        margin-left: -100px;
+    }
+    .btn-switch{
+        font-size: 13px;
+        padding: 10px 20px 10px 20px;
+        width: unset;
+        text-align: center;
+        color: #686868;
+
+    }
+    .btn-switch-active{
+        margin-left: unset;
+        color: hsl(0, 0%, 0%) !important;
+        background-color: unset !important;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .person-img{
+        width: 100px !important;
+    }
+
+    .item-person-block{
+        height: 350px;
+    }
+
+    .translate-left{
+        margin-left: -50px;
+    }
+}
